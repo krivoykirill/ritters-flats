@@ -19,3 +19,6 @@ Route::get('/', function () {
     return view('index');
 });
 Route::post('apply-form', [HomeController::class, 'applyForm']);
+Route::get('success',function () {
+    return view('success');
+});

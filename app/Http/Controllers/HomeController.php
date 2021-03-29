@@ -16,9 +16,9 @@ class HomeController extends Controller
             'token' => config('services.trello.token'),
             'idList' => '6060f290c9eefb325aafd46b',
             'name' => date("d-m-Y H:i:s").' '.$request->full_name,
-            'desc' => $request->town.'%0D%0A'.$request->district.'%0D%0A'.$request->building_type.'%0D%0A'.$request->area.'%0D%0A'.'%0D%0A'.$request->phone,
+            'desc' => $request->town.', '.$request->district.', '.$request->building_type.', '.$request->area.'m2, '.' '.$request->phone,
             'pos'=>'top'
         ]);
-        dd($response);
+        return redirect('success');
     }
 }

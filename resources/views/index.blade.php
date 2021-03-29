@@ -35,57 +35,57 @@
                             <i style="float:left;" class="fas fa-city"></i>
 
                             <select name="district">
-                                <option value="" disabled selected> Выберите район</option>
+                                <option value="N/A" disabled selected> Выберите район</option>
                                 <option disabled>Рига</option>
 
-                                <option value="2"> Агенскалнс</option>
-                                <option value="52"> Букулти</option>
-                                <option value="33"> Вецаки</option>
-                                <option value="4"> Вецрига</option>
-                                <option value="19"> Дарзциемс</option>
-                                <option value="6"> Золитуде</option>
-                                <option value="7"> Ильгуциемс</option>
-                                <option value="8"> Иманта</option>
-                                <option value="57"> Кипсала</option>
-                                <option value="31"> Межапарк</option>
-                                <option value="18"> Межциемс</option>
-                                <option value="60"> Пиньки</option>
-                                <option value="9"> Плявниеки</option>
-                                <option value="10"> Пурвциемс</option>
-                                <option value="11"> Румбула</option>
-                                <option value="12"> Саркандаугава</option>
-                                <option value="13"> Тейка</option>
-                                <option value="1"> Центр</option>
-                                <option value="20"> Шампетерис</option>
-                                <option value="55"> Шкиротава</option>
+                                <option value="Агенскалнс"> Агенскалнс</option>
+                                <option value="Букулти"> Букулти</option>
+                                <option value="Вецаки"> Вецаки</option>
+                                <option value="Вецрига"> Вецрига</option>
+                                <option value="Дарзциемс"> Дарзциемс</option>
+                                <option value="Золитуде"> Золитуде</option>
+                                <option value="Ильгуциемс"> Ильгуциемс</option>
+                                <option value="Иманта"> Иманта</option>
+                                <option value="Кипсала"> Кипсала</option>
+                                <option value="Межапарк"> Межапарк</option>
+                                <option value="Межциемс"> Межциемс</option>
+                                <option value="Пиньки"> Пиньки</option>
+                                <option value="Плявниеки"> Плявниеки</option>
+                                <option value="Пурвциемс"> Пурвциемс</option>
+                                <option value="Румбула"> Румбула</option>
+                                <option value="Саркандаугава"> Саркандаугава</option>
+                                <option value="Тейка"> Тейка</option>
+                                <option value="Центр"> Центр</option>
+                                <option value="Шампетерис"> Шампетерис</option>
+                                <option value="Шкиротава"> Шкиротава</option>
 
                                 <option disabled>Юрмала</option>
 
-                                <option value="3"> Булдури</option>
-                                <option value="38"> Дзинтари</option>
-                                <option value="40"> Дубулты</option>
-                                <option value="45"> Каугури</option>
-                                <option value="68"> Лиелупе</option>
-                                <option value="77"> Меллужи</option>
-                                <option value="59"> Пумпури</option>
-                                <option value="44"> Яундубулты</option>
+                                <option value="Булдури"> Булдури</option>
+                                <option value="Дзинтари"> Дзинтари</option>
+                                <option value="Дубулты"> Дубулты</option>
+                                <option value="Каугури"> Каугури</option>
+                                <option value="Лиелупе"> Лиелупе</option>
+                                <option value="Меллужи"> Меллужи</option>
+                                <option value="Пумпури"> Пумпури</option>
+                                <option value="Яундубулты"> Яундубулты</option>
 
                                 <option disabled>Рижский район</option>
 
-                                <option value="79"> Балтэзерс</option>
-                                <option value="64"> Дзидриняс</option>
-                                <option value="36"> Марупе</option>
-                                <option value="41"> Плаканциемс</option>
-                                <option value="51"> Пулкарне</option>
-                                <option value="63"> Сауриеши</option>
-                                <option value="67"> Стуниши</option>
-                                <option value="62"> Царникава</option>
-                                <option value="43"> Цекуле</option>
-                                <option value="54"> Эглюциемс</option>
+                                <option value="Балтэзерс"> Балтэзерс</option>
+                                <option value="Дзидриняс"> Дзидриняс</option>
+                                <option value="Марупе"> Марупе</option>
+                                <option value="Плаканциемс"> Плаканциемс</option>
+                                <option value="Пулкарне"> Пулкарне</option>
+                                <option value="Сауриеши"> Сауриеши</option>
+                                <option value="Стуниши"> Стуниши</option>
+                                <option value="Царникава"> Царникава</option>
+                                <option value="Цекуле"> Цекуле</option>
+                                <option value="Эглюциемс"> Эглюциемс</option>
 
                                 <option disabled>Саласпилс</option>
 
-                                <option value="80"> Бривлауки</option>
+                                <option value="Бривлауки"> Бривлауки</option>
 
                     
                             </select>
@@ -95,21 +95,21 @@
                             <i style="float:left;" class="fas fa-home"></i>
 
                             <select name="building_type">
-                                <option value="" disabled selected> Выберите серию</option>
-                                <option value="1">Довоенный дом</option> 
-                                <option value="2">119 серия</option> 
-                                <option value="3">103 серия</option> 
-                                <option value="4">Чешский проект</option> 
-                                <option value="5">Pеновированный</option> 
-                                <option value="6">Cпецпроект</option> 
-                                <option value="7">Литовский проект</option> 
-                                <option value="8">Хрущевка</option>
-                                <option value="9">Новострой</option> 
-                                <option value="10">Малосемейная</option> 
-                                <option value="11">602 серия</option> 
-                                <option value="12">467 серия</option> 
-                                <option value="13">104 серия</option> 
-                                <option value="14">Сталинка</option>
+                                <option value="UnknownBuildingType" disabled selected> Выберите серию</option>
+                                <option value="Довоенный дом">Довоенный дом</option> 
+                                <option value="119 серия">119 серия</option> 
+                                <option value="103 серия">103 серия</option> 
+                                <option value="Чешский проект">Чешский проект</option> 
+                                <option value="Pеновированный">Pеновированный</option> 
+                                <option value="Cпецпроект">Cпецпроект</option> 
+                                <option value="Литовский проект">Литовский проект</option> 
+                                <option value="Хрущевка">Хрущевка</option>
+                                <option value="Новострой">Новострой</option> 
+                                <option value="Малосемейная">Малосемейная</option> 
+                                <option value="602 серия">602 серия</option> 
+                                <option value="467 серия">467 серия</option> 
+                                <option value="104 серия">104 серия</option> 
+                                <option value="Сталинка">Сталинка</option>
                             </select>
                         </div>
 
