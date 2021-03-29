@@ -4646,9 +4646,9 @@ readers do not read off random characters that represent icons */
 
 .bg-riga-landing {
     position: absolute;
-    top: -97px;
-    width: 100%;
-    height: 100%;
+    top: -64px;
+    width: 102%;
+    height: 102%;
     z-index: -10;
     background-image: url('/img/riga.jpg');
     background-position: center top;
@@ -4660,20 +4660,20 @@ readers do not read off random characters that represent icons */
 }
 
 nav {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
     z-index: 9999;
 }
-
+/* 
 nav .bg-transparent {
 
     border-bottom: 2px solid #26a69a;
-}
+} */
 
 .landing-section {
+    padding-top:64px;
     height: 100vh;
     /* overflow: hidden; */
     position: relative;
@@ -4862,7 +4862,7 @@ label span::before {
 }
 
 .contacts {
-    padding: 180px 60px !important;
+    padding: 40px 50px !important;
     text-align: right;
     display: table-cell;
     vertical-align: center;
@@ -4934,6 +4934,9 @@ footer {
     .element-center{
         margin-bottom: 50px !important;
     }
+    #landing-section {
+
+    }
 }
 @media only screen and (max-width: 350px) {
     .property-form-section {
@@ -4943,4 +4946,28 @@ footer {
     .select-wrapper input.select-dropdown, .input-field>label   {
         font-size:10px !important;
     }
+}
+
+@media only screen and (min-width: 994px) {
+    h1 {
+        font-size:34pt !important;
+    }
+}
+
+footer {
+    position: relative;
+    padding: 0 !important;
+}
+
+.bg-overlay {
+    position: absolute !important;
+    background-image: url('/img/blackheaded.jpg');
+    /* bottom:0; */
+    top:0;
+    background-position: center center;
+    background-size: cover;
+    filter: opacity(0.4) blur(2px) saturate(0);
+    z-index: -99;
+    height: 644px;
+    width: 100%;
 }

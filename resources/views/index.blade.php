@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<section id="landing-section" class="landing-section">
+<section style="overflow: hidden;" id="landing-section" class="landing-section">
     <div class="bg-riga-landing absolute w-full h-full bg-center -z-10 bg-cover"></div>
 
     <h1 class="text-dark-ritters ritters-header">Узнай,
@@ -15,46 +15,107 @@
     <div style="display:flex;" class="row">
         <div class="col s10 property-form-section bg-transparent">
             <div class="modal-content center">
-                <form action="#">
+                <form method="post" action="{{url('apply-form')}}">
 
                     <div class="row">
 
                         <div class="input-field col s6 l3">
                             <i style="float:left;" class="fas fa-location-arrow"></i>
 
-                            <select>
-                                <option value="5" selected> Рига</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
+                            <select name="town">
+                                <option value="Riga" selected> Рига</option>
+                                <option value="Jurmala">Юрмала</option>
+                                <option value="Saulkrasti">Саулкрасты</option>
+                                <option value="Rigas Rajons">Рижский Район</option>
+                                <option value="Salaspils">Саласпилс</option>
                             </select>
                         </div>
 
                         <div class="input-field col s6 l3">
                             <i style="float:left;" class="fas fa-city"></i>
 
-                            <select>
+                            <select name="district">
                                 <option value="" disabled selected> Выберите район</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
+                                <option disabled>Рига</option>
+
+                                <option value="2"> Агенскалнс</option>
+                                <option value="52"> Букулти</option>
+                                <option value="33"> Вецаки</option>
+                                <option value="4"> Вецрига</option>
+                                <option value="19"> Дарзциемс</option>
+                                <option value="6"> Золитуде</option>
+                                <option value="7"> Ильгуциемс</option>
+                                <option value="8"> Иманта</option>
+                                <option value="57"> Кипсала</option>
+                                <option value="31"> Межапарк</option>
+                                <option value="18"> Межциемс</option>
+                                <option value="60"> Пиньки</option>
+                                <option value="9"> Плявниеки</option>
+                                <option value="10"> Пурвциемс</option>
+                                <option value="11"> Румбула</option>
+                                <option value="12"> Саркандаугава</option>
+                                <option value="13"> Тейка</option>
+                                <option value="1"> Центр</option>
+                                <option value="20"> Шампетерис</option>
+                                <option value="55"> Шкиротава</option>
+
+                                <option disabled>Юрмала</option>
+
+                                <option value="3"> Булдури</option>
+                                <option value="38"> Дзинтари</option>
+                                <option value="40"> Дубулты</option>
+                                <option value="45"> Каугури</option>
+                                <option value="68"> Лиелупе</option>
+                                <option value="77"> Меллужи</option>
+                                <option value="59"> Пумпури</option>
+                                <option value="44"> Яундубулты</option>
+
+                                <option disabled>Рижский район</option>
+
+                                <option value="79"> Балтэзерс</option>
+                                <option value="64"> Дзидриняс</option>
+                                <option value="36"> Марупе</option>
+                                <option value="41"> Плаканциемс</option>
+                                <option value="51"> Пулкарне</option>
+                                <option value="63"> Сауриеши</option>
+                                <option value="67"> Стуниши</option>
+                                <option value="62"> Царникава</option>
+                                <option value="43"> Цекуле</option>
+                                <option value="54"> Эглюциемс</option>
+
+                                <option disabled>Саласпилс</option>
+
+                                <option value="80"> Бривлауки</option>
+
+                    
                             </select>
                         </div>
 
                         <div class="input-field col s6 l3">
                             <i style="float:left;" class="fas fa-home"></i>
 
-                            <select>
+                            <select name="building_type">
                                 <option value="" disabled selected> Выберите серию</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
+                                <option value="1">Довоенный дом</option> 
+                                <option value="2">119 серия</option> 
+                                <option value="3">103 серия</option> 
+                                <option value="4">Чешский проект</option> 
+                                <option value="5">Pеновированный</option> 
+                                <option value="6">Cпецпроект</option> 
+                                <option value="7">Литовский проект</option> 
+                                <option value="8">Хрущевка</option>
+                                <option value="9">Новострой</option> 
+                                <option value="10">Малосемейная</option> 
+                                <option value="11">602 серия</option> 
+                                <option value="12">467 серия</option> 
+                                <option value="13">104 серия</option> 
+                                <option value="14">Сталинка</option>
                             </select>
                         </div>
 
                         <div style="margin-top:30px;" class="input-field col s6 l3">
                             <i class="material-icons prefix">aspect_ratio</i>
-                            <input type="text" id="area">
+                            <input name="area" type="text" id="area">
                             <label for="area">Площадь (m²)</label>
                         </div>
 
@@ -62,13 +123,13 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">person</i>
-                            <input type="text" id="name">
+                            <input name="full_name" type="text" id="name">
                             <label for="name">Имя</label>
                         </div>
 
                         <div class="input-field col s6">
                             <i class="material-icons prefix">local_phone</i>
-                            <input type="password" id="pass">
+                            <input name="phone" type="tel" id="pass">
                             <label for="pass">Телефон</label>
                         </div>
 
@@ -84,7 +145,8 @@
                             <span>Я принимаю правила соглашения </span>
                         </label>
                     </p>
-                    <button class="btn btn-large waves-effect brown lighten-2 pulse btn-confirm">Узнать</button>
+                    <button type="submit" class="btn btn-large waves-effect brown lighten-2 pulse btn-confirm">Узнать</button>
+                    @csrf
                 </form>
             </div>
         </div>
@@ -120,37 +182,20 @@
         </div>
 
     </div>
-    <p class="text-center" style="opacity:0.5; font-size:9pt;">Мы не несём ответственности, мы лишаем девственности. <a
-            class="text-cta" href="#">Почитайте как срать.</a></p>
+    {{-- <p class="text-center" style="opacity:0.5; font-size:9pt;">Мы не несём ответственности, мы лишаем девственности. <a
+            class="text-cta" href="#">Почитайте как срать.</a></p> --}}
 </section>
-<section class="section-cta bg-light-ritters">
+<section style="overflow: hidden;position:relative;background-color: #dfd7d4c2;" class="section-cta">
+    <div class="bg-overlay"></div>
     <div class="container">
         <div class="transition">
             <h2 style="margin-bottom:0;" class="text-center text-dark-ritters text-shadow ritters-header">Помогаем <span
-                    class="text-cta"> определить цену</span></h2>
-            <p style="font-size: 16pt;" class="text-center">и <span class="text-cta"> продать</span> ваше имущество по
+                    class="text-cta"> определить рыночную цену</span></h2>
+            <p style="font-size: 16pt;" class="text-center">и <span class="text-cta"> продать</span> вашу квартиру по
                 <span class="text-cta">максимальной цене</span>.</p>
         </div>
         <div style="margin-top:50px;margin-bottom:15vh;" class="element-center">
-            <a href="#landing-section" class="btn btn-large waves-effect brown lighten-2 pulse btn-confirm">УЗНАТЬ
-                СТОЙМОСТЬ</a>
-        </div>
-    </div>
-    <div class="contact-container row">
-        <div class="col s6 contacts">
-            <h4 style="margin: 0;">Контакты</h4>
-            <ul style="font-weight:600;">
-                <li class="text-cta">+371 22129222</li>
-                <li>Gertrudes iela 23a</li>
-                <li>Riga</li>
-                <li>LV-1038</li>
-            </ul>
-        </div>
-        <div style="padding:0;" class="col s6">
-            <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0"
-                    marginwidth="0"
-                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-            </div>
+            <a href="#landing-section" class="btn btn-large waves-effect brown lighten-2 pulse btn-confirm">Получить консультацию бесплатно</a>
         </div>
     </div>
 </section>
