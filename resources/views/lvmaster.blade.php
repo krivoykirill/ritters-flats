@@ -12,10 +12,10 @@
 </head>
 
 <body class="bg-green-200 font-sans">
-    @include('layouts.header')
+    @include('layouts.lvheader')
     @yield('content')
     
-    @include('layouts.footer')
+    @include('layouts.lvfooter')
     
 
 

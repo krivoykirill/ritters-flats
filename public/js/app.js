@@ -61,7 +61,42 @@ function viewportToPixels(value) {
   var q = Number(parts[1]);
   var side = window[['innerHeight', 'innerWidth'][['vh', 'vw'].indexOf(parts[2])]];
   return side * (q / 100);
-}
+} // Select all links with hashes
+
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('a[href*="#"]') // Remove links that don't actually link to anything
+.not('[href="#"]').not('[href="#0"]').click(function (event) {
+  // On-page links
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    // Figure out element to scroll to
+    var target = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.hash);
+    target = target.length ? target : jquery__WEBPACK_IMPORTED_MODULE_0___default()('[name=' + this.hash.slice(1) + ']'); // Does a scroll target exist?
+
+    if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+      event.preventDefault();
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000, function () {
+        // Callback after animation
+        // Must change focus!
+        var $target = jquery__WEBPACK_IMPORTED_MODULE_0___default()(target);
+        $target.focus();
+
+        if ($target.is(":focus")) {
+          // Checking if the target was focused
+          return false;
+        } else {
+          $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+
+          $target.focus(); // Set focus again
+        }
+
+        ;
+      });
+    }
+  }
+});
 
 /***/ }),
 

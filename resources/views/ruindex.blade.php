@@ -1,4 +1,4 @@
-@extends('master')
+@extends('rumaster')
 
 @section('css')
 
@@ -34,8 +34,8 @@
                         <div class="input-field col s6 l3">
                             <i style="float:left;" class="fas fa-city"></i>
 
-                            <select name="district">
-                                <option value="N/A" disabled selected> Выберите район</option>
+                            <select required="" aria-required="true" name="district">
+                                <option value="" disabled selected> Выберите район</option>
                                 <option disabled>Рига</option>
 
                                 <option value="Агенскалнс"> Агенскалнс</option>
@@ -94,8 +94,8 @@
                         <div class="input-field col s6 l3">
                             <i style="float:left;" class="fas fa-home"></i>
 
-                            <select name="building_type">
-                                <option value="UnknownBuildingType" disabled selected> Выберите серию</option>
+                            <select required="" aria-required="true" name="building_type">
+                                <option value="" disabled selected> Выберите серию</option>
                                 <option value="Довоенный дом">Довоенный дом</option> 
                                 <option value="119 серия">119 серия</option> 
                                 <option value="103 серия">103 серия</option> 
@@ -115,7 +115,7 @@
 
                         <div style="margin-top:30px;" class="input-field col s6 l3">
                             <i class="material-icons prefix">aspect_ratio</i>
-                            <input name="area" type="text" id="area">
+                            <input name="area" type="text" id="area" required="" aria-required="true">
                             <label for="area">Площадь (m²)</label>
                         </div>
 
@@ -123,13 +123,13 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">person</i>
-                            <input name="full_name" type="text" id="name">
+                            <input name="full_name" type="text" id="name" required="" aria-required="true">
                             <label for="name">Имя</label>
                         </div>
 
                         <div class="input-field col s6">
                             <i class="material-icons prefix">local_phone</i>
-                            <input name="phone" type="tel" id="pass">
+                            <input name="phone" type="tel" id="pass" required="" aria-required="true">
                             <label for="pass">Телефон</label>
                         </div>
 
@@ -141,12 +141,13 @@
 
                     <p class="text-center">
                         <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" required="" aria-required="true" />
                             <span>Я принимаю правила соглашения </span>
                         </label>
                     </p>
-                    <button type="submit" class="btn btn-large waves-effect brown lighten-2 pulse btn-confirm">Узнать</button>
+                    <button name="action" type="submit" class="btn btn-large waves-effect brown lighten-2 pulse btn-confirm">Узнать</button>
                     @csrf
+                    <input type="hidden" name="lang" value="ru">
                 </form>
             </div>
         </div>

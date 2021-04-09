@@ -13,7 +13,7 @@
                     <span>+371 22129222</span>
                 </a>
             </li>
-            <li><a href="collapsible.html">LV</a></li>
+            <li><a href="{{url('/')}}">LV</a></li>
         </ul>
     </div>
 </nav>

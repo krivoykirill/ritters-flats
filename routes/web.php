@@ -15,10 +15,16 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+Route::get('/ru', function () {
+    return view('ruindex');
+});
 Route::get('/', function () {
-    return view('index');
+    return view('lvindex');
 });
 Route::post('apply-form', [HomeController::class, 'applyForm']);
-Route::get('success',function () {
-    return view('success');
+Route::get('lvsuccess',function () {
+    return view('lvsuccess');
+});
+Route::get('rusuccess',function () {
+    return view('rusuccess');
 });

@@ -9,8 +9,6 @@ class HomeController extends Controller
 {
     public function applyForm(Request $request){
 
-        // dd($request->all());
-
         $response = Http::asForm()->post('https://api.trello.com/1/cards/', [
             'key' => config('services.trello.key'),
             'token' => config('services.trello.token'),
@@ -19,6 +17,11 @@ class HomeController extends Controller
             'desc' => $request->town.', '.$request->district.', '.$request->building_type.', '.$request->area.'m2, '.' '.$request->phone,
             'pos'=>'top'
         ]);
-        return redirect('success');
+
+        if ($request->lang =='lv'){
+            return redirect('lvsuccess');
+        } else {
+            return redirect('rusuccess');
+        }
     }
 }
